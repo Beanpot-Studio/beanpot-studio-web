@@ -1,0 +1,49 @@
+---
+import DefaultLayout from "../layouts/Layout.astro";
+import { Image } from "astro:assets";
+import img from "../assets/jen.jpg";
+---
+
+<DefaultLayout title="About Me">
+  <div
+    id="container"
+    class="flex items-center justify-center min-h-screen bg-gray-100"
+  >
+    <main class="my-12">
+      <div class="space-content container">
+        <h1>About Me</h1>
+        <section class="my-20">
+          <div class="container">
+            <div class="grid grid-cols-1 gap-12 md:grid-cols-2">
+              <Image
+                src={img}
+                alt="Jen Looper"
+                class="rounded-md"
+                decoding="async"
+              />
+              <div class="space-content flex flex-col justify-center">
+                <p class="text-2xl">
+                  Welcome! I'm Jen Looper. I'm the founder and CEO of Beanpot
+                  Studio, where great things are cooking, built in Boston. have
+                  over 25 years' experience as a web and mobile developer,
+                  specializing in creating creative cross-platform apps, often
+                  with an educational focus. I design excellent curricula on
+                  technical topics and am known for the quality of my
+                  educational content, my managerial skills, and my creative
+                  strategies.
+                </p>
+                <p class="text-2xl">
+                  I've worked as Head of Academic Advocacy at AWS, a Principal
+                  Cloud Developer Advocate at Microsoft, and as a Developer
+                  Advocate at Progress/Telerik. I've also worked at small,
+                  medium, and large companies over my career.
+                </p>
+              </div>
+            </div>
+            <hr class="my-10" />
+          </div>
+        </section>
+      </div>
+    </main>
+  </div>
+</DefaultLayout>
