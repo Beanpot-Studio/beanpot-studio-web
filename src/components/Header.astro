@@ -1,9 +1,8 @@
 ---
 const pathname = Astro.url.pathname;
-import logo from "../assets/logo.png?url";
 ---
 
-<nav>
+<nav class="shadow bg-brown sticky">
   <div class="container mx-auto px-4">
     <div class="flex justify-between items-center h-16">
       <!-- Left: Logo -->
@@ -17,19 +16,19 @@ import logo from "../assets/logo.png?url";
       <div class="flex space-x-6">
         <a
           href="/about"
-          class="text-burgundy p-4 hover:underline transition-colors duration-200 font-medium"
+          class="text-cream p-4 hover:underline transition-colors duration-200 font-medium"
         >
           About
         </a>
         <a
           href="/contact"
-          class="text-burgundy p-4 hover:underline transition-colors duration-200 font-medium"
+          class="text-cream p-4 hover:underline transition-colors duration-200 font-medium"
         >
           Contact
         </a>
         <a
           href="/projects"
-          class="text-burgundy p-4 hover:underline transition-colors duration-200 font-medium"
+          class="text-cream p-4 hover:underline transition-colors duration-200 font-medium"
         >
           Projects
         </a>
