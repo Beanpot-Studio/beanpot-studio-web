@@ -15,9 +15,7 @@ body {
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
 
-    main {
-        margin: 2em;
-    }
+    
 
     h1 {
       font-size: 3rem;
@@ -79,4 +77,11 @@ body {
       }
     }
   }
-  
+
+
+footer {
+  background-color: #631d35; /* Example color */
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+}
