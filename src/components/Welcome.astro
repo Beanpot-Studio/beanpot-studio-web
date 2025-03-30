@@ -1,30 +1,25 @@
 ---
-import logo from "../assets/logo.png?url";
+import logo from "../assets/logo.png";
+import { Image } from 'astro:assets';
 ---
 
-<div
-  id="container"
-  class="flex items-center justify-center min-h-screen bg-cream"
->
-  <main
-    class="flex flex-col md:flex-row items-center justify-center w-full max-w-6xl md:space-x-4"
-  >
-    <!-- Image Section -->
+  <main class="flex flex-col md:flex-row w-full md:w-2/3 md:space-x-4 my-12 justify-center mx-auto">
+   
     <div class="flex-shrink-0 w-full md:w-1/2 flex justify-center">
-      <img src={logo} alt="Beanpot Studio logo" class="w-2/3" />
+      <Image src={logo} alt="Beanpot Studio logo" />
     </div>
-    <!-- Text Section -->
+   
     <div
-      class="w-full md:w-1/2 flex flex-col items-center md:items-start text-center md:text-left px-2"
+      class="w-full flex flex-col items-center md:items-start text-center md:text-left"
     >
-      <h1 class="text-5xl text-black font-bold mb-4 font-serif pb-5">
+      <h1 class="text-5xl text-black font-bold mb-4 font-serif pb-5 w-2/3">
         Cooking up solutions for students and teachers
       </h1>
-      <h2 class="text-tan text-2xl font-sans pb-5">
+      <h2 class="text-tan text-2xl font-sans pb-5 w-2/3">
         Founded by an educator and technologist, Beanpot Studio offers
         AI-enhanced software solutions that make concepts stick.
       </h2>
-	  <p>portfolio coming soon!</p>
+      <p>portfolio coming soon!</p>
     </div>
   </main>
-</div>
+
