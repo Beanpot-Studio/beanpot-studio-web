@@ -1,0 +1,162 @@
+---
+import logo from "../assets/tall-logo.png";
+import { Image } from "astro:assets";
+---
+
+<section
+  class="relative h-[75vh] flex items-center overflow-hidden bg-[url('../assets/beans.jpg')] bg-fixed bg-cover bg-center bg-opacity-10"
+  id="home"
+>
+  <div
+    class="opacity-90 max-w-7xl p-24 mx-auto px-4 sm:px-6 lg:px-8 rounded-xl w-full bg-gradient-to-tr from-brown to-burgundy shadow-lg"
+  >
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <!-- Text Content -->
+      <div data-aos="fade-right" data-aos-duration="1000">
+        <h1
+          class="text-5xl font-serif sm:text-5xl md:text-6xl font-bold text-cream mb-6"
+        >
+          Beanpot Studio
+        </h1>
+        <p class="text-4xl text-cream mb-8 font-sans">
+          Cooking up solutions for students and teachers
+        </p>
+        <p class="text-3xl text-cream mb-8 font-sans">
+          Founded by an educator and technologist, Beanpot Studio offers
+          AI-enhanced software solutions that make concepts stick.
+        </p>
+      </div>
+
+      <!-- Circular Image -->
+      <div
+        class="relative flex justify-center"
+        data-aos="fade-left"
+        data-aos-duration="1000"
+        data-aos-delay="200"
+      >
+        <div class="relative w-30 h-64 sm:w-64 sm:h-80 md:w-64 md:h-96">
+          <div class="absolute inset-0 animate-pulse m-10"></div>
+          <Image
+            src={logo}
+            alt="Beanpot Studio"
+            class="w-full h-full object-cover"
+          />
+          <!-- Decorative circles -->
+          <div
+            class="absolute -inset-4 border-2 border-cream/20 rounded-full animate-spin-slow"
+          >
+          </div>
+          <div
+            class="absolute -inset-8 border-2 border-cream/10 rounded-full animate-spin-slower"
+          >
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Centered Button that straddles sections -->
+  <div
+    class="absolute -bottom-12 left-0 right-0 flex justify-center"
+    data-aos="fade-up"
+    data-aos-delay="400"
+  >
+    <a
+      href="#goals"
+      class="group flex flex-col items-center gap-2 bg-cream rounded-t-full p-6 hover:shadow-xl transition-all duration-300 hover:scale-80"
+    >
+      <svg
+        class="w-20 h-20 text-burgundy animate-bounce group-hover:animate-none group-hover:translate-y-1 transition-transform"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 25 38"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="3"
+          d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+      </svg>
+    </a>
+  </div>
+</section>
+<section id="goals" class="py-20 bg-cream">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2
+      class="text-3xl font-bold text-center mb-12 font-serif"
+      data-aos="fade-up"
+    >
+      Learn more about the studio
+    </h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 font-sans">
+      {
+        [
+          {
+            title: "About",
+            description: "All about our mission, values, and staff. We amount to more than a hill of beans!",
+            delay: 0,
+            href: "/about",
+            color: "bg-burgundy",
+          },
+          {
+            title: "Contact",
+            description:
+              "Looking for a solution for your classroom or online course? Contact us using this form.",
+            delay: 100,
+            href: "/contact",
+            color: "bg-brown",
+          },
+          {
+            title: "Solutions",
+            description:
+              "Portfolio coming soon! We are working on some great solutions for students and teachers.",
+            delay: 200,
+            href: "/solutions",
+            color: "bg-tan",
+          },
+        ].map((goal, index) => (
+          <a href={goal.href}
+            class={`${goal.color} rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-1`}"
+            data-aos="fade-up"
+            data-aos-delay={goal.delay}
+          >
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2 text-cream text-sans">
+                {goal.title}
+              </h3>
+              <p class="text-cream">{goal.description}</p>
+            </div>
+          </a>
+        ))
+      }
+    </div>
+  </div>
+</section>
+<style>
+  @keyframes spin-slow {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes spin-slower {
+    from {
+      transform: rotate(360deg);
+    }
+    to {
+      transform: rotate(0deg);
+    }
+  }
+
+  .animate-spin-slow {
+    animation: spin-slow 20s linear infinite;
+  }
+
+  .animate-spin-slower {
+    animation: spin-slower 30s linear infinite;
+  }
+</style>
