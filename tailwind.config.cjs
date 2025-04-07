@@ -15,7 +15,7 @@ module.exports = {
         cream: '#f7f2e7',
       },
       fontFamily: {
-        serif: ['DM Serif Display', 'serif'], // For headings
+        serif: ['Lato', 'serif'], // For headings
         sans: ['DM Sans', 'sans-serif'], // For body text
       },
     },
