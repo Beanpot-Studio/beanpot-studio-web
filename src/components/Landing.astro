@@ -41,15 +41,19 @@ import { Image } from "astro:assets";
             alt="Beanpot Studio"
             class="w-full h-full object-cover"
           />
-          <!-- Decorative circles -->
-          <div
-            class="absolute -inset-4 border-2 border-cream/20 rounded-full animate-spin-slow"
-          >
-          </div>
-          <div
-            class="absolute -inset-8 border-2 border-cream/10 rounded-full animate-spin-slower"
-          >
-          </div>
+          <!-- Particles -->
+          <div class="particle particle-0" />
+          <div class="particle particle-1" />
+          <div class="particle particle-2" />
+          <div class="particle particle-3" />
+          <div class="particle particle-4" />
+          <div class="particle particle-5" />
+          <div class="particle particle-6" />
+          <div class="particle particle-7" />
+          <div class="particle particle-8" />
+          <div class="particle particle-9" />
+          <div class="particle particle-10" />
+          <div class="particle particle-11" />
         </div>
       </div>
     </div>
@@ -134,6 +138,42 @@ import { Image } from "astro:assets";
   </div>
 </section>
 <style>
+  .particle {
+    position: absolute;
+    width: 0.5rem;
+    height: 0.5rem;
+    background-color: rgba(247, 242, 231, 0.3);
+    border-radius: 50%;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+  }
+
+  @keyframes particle-float {
+    0% {
+      transform: translateX(calc(-50% + var(--tx))) translateY(0) scale(1);
+      opacity: 1;
+    }
+    100% {
+      transform: translateX(calc(-50% + var(--tx))) translateY(var(--ty)) scale(0);
+      opacity: 0;
+    }
+  }
+
+  .particle-0 { --tx: -20px; --ty: -100px; animation: particle-float 3s infinite; }
+  .particle-1 { --tx: 20px; --ty: -120px; animation: particle-float 3.2s infinite; }
+  .particle-2 { --tx: -40px; --ty: -140px; animation: particle-float 3.4s infinite; }
+  .particle-3 { --tx: 40px; --ty: -160px; animation: particle-float 3.6s infinite; }
+  .particle-4 { --tx: -30px; --ty: -180px; animation: particle-float 3.8s infinite; }
+  .particle-5 { --tx: 30px; --ty: -200px; animation: particle-float 4s infinite; }
+  .particle-6 { --tx: -50px; --ty: -220px; animation: particle-float 4.2s infinite; }
+  .particle-7 { --tx: 50px; --ty: -240px; animation: particle-float 4.4s infinite; }
+  .particle-8 { --tx: -25px; --ty: -260px; animation: particle-float 4.6s infinite; }
+  .particle-9 { --tx: 25px; --ty: -280px; animation: particle-float 4.8s infinite; }
+  .particle-10 { --tx: -35px; --ty: -300px; animation: particle-float 5s infinite; }
+  .particle-11 { --tx: 35px; --ty: -320px; animation: particle-float 5.2s infinite; }
+
   @keyframes spin-slow {
     from {
       transform: rotate(0deg);
