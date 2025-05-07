@@ -1,0 +1,107 @@
+<header
+  class="sticky top-0 w-full backdrop-blur-md z-50 shadow-sm"
+  style="background-image: linear-gradient(rgba(46, 34, 30, 0.95), rgba(46, 34, 30, 0.95)), url('/beans.jpg'); background-size: cover; background-position: center center;"
+>
+  <div class="container-custom py-4">
+    <nav class="flex items-center justify-between">
+      <!-- Logo -->
+      <a href="/" class="flex items-center space-x-2">
+        <div
+          class="w-10 h-10 bg-gradient-to-br from-primary-600 to-secondary-500 rounded-full flex items-center justify-center overflow-hidden"
+        >
+          <span class="text-white font-bold text-xl">🫘</span>
+        </div>
+        <span
+          class="text-xl font-semibold bg-gradient-to-r from-primary-400 to-secondary-600 bg-clip-text text-transparent"
+        >
+          Beanpot Studio
+        </span>
+      </a>
+
+      {/* New wrapper for Desktop Nav and CTA to push them to the right */}
+      <div class="hidden md:flex items-center">
+        {/* Desktop Navigation Links */}
+        <div class="flex items-center space-x-8">
+          <a
+            href="/about"
+            class="font-medium text-primary-100 hover:text-orange-200 transition-colors"
+            >About Us</a
+          >
+          <a
+            href="../#features-section"
+            class="font-medium text-primary-100 hover:text-orange-200 transition-colors"
+            >Features</a
+          >
+          <a
+            href="../#featured-project-showcase"
+            class="font-medium text-primary-100 hover:text-orange-200 transition-colors"
+            >Projects</a
+          >
+        </div>
+
+        {/* CTA Button */}
+        <div class="ml-8">
+          <a href="/contact" class="btn-primary">Contact Us</a>
+        </div>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button
+        id="menu-toggle"
+        class="md:hidden text-orange-100 hover:text-orange-200"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="w-6 h-6"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path>
+        </svg>
+      </button>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="md:hidden hidden pt-4 pb-2 animate-slide-down">
+      <div class="flex flex-col space-y-4">
+        <a
+          href="/"
+          class="font-medium text-primary-100 hover:text-orange-200 transition-colors py-2"
+          >Home</a
+        >
+        <a
+          href="#features-section"
+          class="font-medium text-primary-100 hover:text-orange-200 transition-colors py-2"
+          >Features</a
+        >
+        <a
+          href="#featured-project-showcase"
+          class="font-medium text-primary-100 hover:text-orange-200 transition-colors py-2"
+          >Projects</a
+        >
+
+        <a href="/contact" class="btn-primary w-full text-center mt-2"
+          >Contact Us</a
+        >
+      </div>
+    </div>
+  </div>
+</header>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const menuToggle = document.getElementById("menu-toggle");
+    const mobileMenu = document.getElementById("mobile-menu");
+
+    if (menuToggle && mobileMenu) {
+      menuToggle.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
+    }
+  });
+</script>

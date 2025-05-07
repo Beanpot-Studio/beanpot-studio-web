@@ -1,12 +1,15 @@
 ---
-import Layout from "../layouts/InnerLayout.astro";
+import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout>
+<Layout
+  title="Page Not Found (404) | Beanpot Studio"
+  description="Oops! The page you are looking for at Beanpot Studio could not be found. It might be still growing or has been moved."
+>
   <div class="flex flex-col items-center text-center bg-cream my-12">
     <h1 class="text-6xl font-bold text-burgundy mb-4">Page not yet found!</h1>
     <p class="text-xl text-gray-700 mb-6">
-        🌱 Oops! The page you're looking for is still growing! Please stay tuned.
+      🌱 Oops! The page you're looking for is still growing! Please stay tuned.
     </p>
     <a href="/" class="text-tan font-medium hover:underline">
       Go back to the homepage

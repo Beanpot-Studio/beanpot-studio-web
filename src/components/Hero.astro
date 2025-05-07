@@ -1,0 +1,197 @@
+---
+import { Image } from "astro:assets";
+import logoImage from "../assets/logo.png";
+---
+
+<section
+  class="relative overflow-hidden bg-gradient-to-b from-primary-100 to-primary-300"
+>
+  
+
+  <div class="container-custom py-20 md:py-28 relative">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <!-- Text Content -->
+      <div class="space-y-8 max-w-2xl">
+        <span
+          class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-primary-300 text-primary-800"
+        >
+          Cultivating educational innovation
+        </span>
+
+        <h1 class="font-bold tracking-tight text-primary-900">
+          Growing <span
+            class="text-transparent bg-clip-text bg-gradient-to-r from-primary-600 to-secondary-600"
+            >exceptional</span
+          > web apps for modern education
+        </h1>
+
+        <p class="text-lg text-primary-700">
+          Plant the seeds of engaging, interactive learning experiences that
+          empower educators and students alike. Our studio provides the tools
+          you need to make assessments and credentialing seamless for all.
+        </p>
+
+        <div class="flex flex-wrap gap-4">
+          <a href="#featured-project-showcase" class="btn-primary">
+            Explore Projects
+          </a>
+          <a href="/contact" class="btn-outline bg-primary-50"> Get in Touch </a>
+        </div>
+
+        <div class="flex items-center pt-2">
+          <div class="flex -space-x-2">
+            <img
+              src="https://images.pexels.com/photos/3184405/pexels-photo-3184405.jpeg?auto=compress&cs=tinysrgb&w=80"
+              alt="User"
+              class="w-8 h-8 rounded-full border-2 border-white"
+            />
+            <img
+              src="https://images.pexels.com/photos/3184611/pexels-photo-3184611.jpeg?auto=compress&cs=tinysrgb&w=80"
+              alt="User"
+              class="w-8 h-8 rounded-full border-2 border-white"
+            />
+            <img
+              src="https://images.pexels.com/photos/3184603/pexels-photo-3184603.jpeg?auto=compress&cs=tinysrgb&w=80"
+              alt="User"
+              class="w-8 h-8 rounded-full border-2 border-white"
+            />
+            <img
+              src="https://images.pexels.com/photos/1181619/pexels-photo-1181619.jpeg?auto=compress&cs=tinysrgb&w=80"
+              alt="User"
+              class="w-8 h-8 rounded-full border-2 border-white"
+            />
+          </div>
+          <span class="ml-4 text-sm text-primary-700">
+            Trusted by students and educators worldwide
+          </span>
+        </div>
+      </div>
+
+      <div class="relative flex justify-center items-center">
+       
+          <Image src={logoImage} alt="Beanpot Studio Logo" width={300} />
+          {
+            /* Particles will be contained within this div and positioned relative to it */
+          }
+          <div class="particle particle-0"></div>
+          <div class="particle particle-1"></div>
+          <div class="particle particle-2"></div>
+          <div class="particle particle-3"></div>
+          <div class="particle particle-4"></div>
+          <div class="particle particle-5"></div>
+          <div class="particle particle-6"></div>
+          <div class="particle particle-7"></div>
+          <div class="particle particle-8"></div>
+          <div class="particle particle-9"></div>
+          <div class="particle particle-10"></div>
+          <div class="particle particle-11"></div>
+        </div>
+      </div>
+    
+  </div>
+</section>
+
+<style>
+  .particle {
+    position: absolute;
+    width: 0.5rem;
+    height: 0.5rem;
+    background-color: rgba(105, 55, 5, 0.3);
+    border-radius: 50%;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+  }
+
+  @keyframes particle-float {
+    0% {
+      transform: translateX(calc(-50% + var(--tx))) translateY(0) scale(1);
+      opacity: 1;
+    }
+    100% {
+      transform: translateX(calc(-50% + var(--tx))) translateY(var(--ty))
+        scale(0);
+      opacity: 0;
+    }
+  }
+
+  .particle-0 {
+    --tx: -20px;
+    --ty: -25px;
+    animation: particle-float 3s infinite;
+  }
+  .particle-1 {
+    --tx: 20px;
+    --ty: -30px;
+    animation: particle-float 3.2s infinite;
+  }
+  .particle-2 {
+    --tx: -40px;
+    --ty: -35px;
+    animation: particle-float 3.4s infinite;
+  }
+  .particle-3 {
+    --tx: 40px;
+    --ty: -40px;
+    animation: particle-float 3.6s infinite;
+  }
+  .particle-4 {
+    --tx: -30px;
+    --ty: -45px;
+    animation: particle-float 3.8s infinite;
+  }
+  .particle-5 {
+    --tx: 30px;
+    --ty: -50px;
+    animation: particle-float 4s infinite;
+  }
+  .particle-6 {
+    --tx: -50px;
+    --ty: -55px;
+    animation: particle-float 4.2s infinite;
+  }
+  .particle-7 {
+    --tx: 50px;
+    --ty: -60px;
+    animation: particle-float 4.4s infinite;
+  }
+  .particle-8 {
+    --tx: -25px;
+    --ty: -65px;
+    animation: particle-float 4.6s infinite;
+  }
+  .particle-9 {
+    --tx: 25px;
+    --ty: -70px;
+    animation: particle-float 4.8s infinite;
+  }
+  .particle-10 {
+    --tx: -35px;
+    --ty: -75px;
+    animation: particle-float 5s infinite;
+  }
+  .particle-11 {
+    --tx: 35px;
+    --ty: -80px;
+    animation: particle-float 5.2s infinite;
+  }
+
+  @keyframes spin-slow {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes spin-slower {
+    from {
+      transform: rotate(360deg);
+    }
+    to {
+      transform: rotate(0deg);
+    }
+  }
+</style>
