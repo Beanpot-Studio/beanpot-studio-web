@@ -1,0 +1,39 @@
+---
+title: https://beanpotstudio.com
+url: https://beanpotstudio.com
+timestamp: 2025-06-15T19:55:13.288Z
+---
+# Cultivating educational innovation
+
+Growing exceptional web apps for modern education
+
+Plant the seeds of engaging, interactive learning experiences that
+empower educators and students alike. Our studio provides the tools
+you need to make assessments and credentialing seamless for all.
+
+Trusted by students and educators worldwide
+
+## Powerful Features
+
+Experience exceptional educational apps
+
+Our studio provides all the tools and features you need to create
+engaging, interactive educational experiences for learners of all ages.
+
+*   Interactive Learning: Share lesson plans to auto-generate assessments that improve knowledge retention.
+*   Assessment Tools: Allow students to take assessments on their own time, receive real-time feedback and earn badges for their progress.
+*   Adaptive Learning: Students receive instant feedback on their assessment progress and can re-take assessments to improve their score.
+*   Collaborative Workspaces: Open your lessons to the public, or invite students to join your classes in a private roster.
+*   Analytics Dashboard: Track student progress and identify areas for improvement with comprehensive analytics.
+*   Premium Options: Create custom badges, unlock innovative lesson formats, advanced reports, and work with us to design curricula.
+
+## Featured Project
+
+A platform for teachers to create and share a fully automated but
+customizable assessment and credentialing experience with their
+students.
+
+Ready to transform your educational experience?
+
+Join students and educators worldwide who are building incredible
+learning experiences with Beanpot Studio.
