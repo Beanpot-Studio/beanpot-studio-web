@@ -53,7 +53,7 @@ const features = [
     class="absolute inset-0 w-full h-full object-cover z-0"
   />
   {/* Overlay for Contrast */}
-  <div class="absolute inset-0 z-10 bg-primary-900/75"></div>
+  <div class="absolute inset-0 z-10 bg-accent-900/90"></div>
 
   {/* Original Content - ensure it's on top */}
   <div class="container-custom relative z-20">
@@ -80,7 +80,9 @@ const features = [
         features.map((feature) => (
           <div class="card card-hover group">
             <div
-              class={`w-12 h-12 rounded-lg bg-${feature.color}-100 flex items-center justify-center mb-5 text-${feature.color}-800 transition-colors`}
+              class={`w-12 h-12 rounded-lg bg-${feature.color}-900 flex 
+                items-center justify-center mb-5 text-${feature.color}-100 
+                transition-colors`}
               set:html={feature.icon}
             />
             <h3 class="text-xl font-semibold mb-3">{feature.title}</h3>
