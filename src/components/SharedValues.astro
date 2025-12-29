@@ -1,0 +1,101 @@
+---
+import { GraduationCap, Shield, Zap, Rocket, Lightbulb, Users } from 'lucide-astro';
+
+const values = [
+  {
+    title: "Student & Teacher First",
+    description:
+      "Every feature we build prioritizes the needs of educators and learners. We design with empathy, understanding the real challenges faced in modern classrooms.",
+    icon: GraduationCap,
+    color: "primary",
+  },
+  {
+    title: "Accessibility by Design",
+    description:
+      "We believe technology should be inclusive. Our platforms are built with accessibility at the core, ensuring every student can participate and succeed regardless of their needs.",
+    icon: Shield,
+    color: "primary",
+  },
+  {
+    title: "Seamless Experience",
+    description:
+      "Complex educational tools shouldn't feel complex. We craft intuitive interfaces that feel natural, reducing friction so educators can focus on teaching and students can focus on learning.",
+    icon: Zap,
+    color: "primary",
+  },
+  {
+    title: "Empowerment Through Technology",
+    description:
+      "We don't just build tools—we create opportunities. Our platforms empower educators to innovate in their teaching and students to take ownership of their learning journey.",
+    icon: Rocket,
+    color: "primary",
+  },
+  {
+    title: "Continuous Innovation",
+    description:
+      "Education evolves, and so do we. We're committed to staying at the forefront of educational technology, continuously improving and adding features that matter to our community.",
+    icon: Lightbulb,
+    color: "primary",
+  },
+  {
+    title: "Community-Driven",
+    description:
+      "Our products grow from real conversations with educators and students. We listen, iterate, and build features that solve actual problems in educational settings.",
+    icon: Users,
+    color: "primary",
+  },
+];
+---
+
+<section id="shared-values" class="section-padding relative overflow-hidden">
+  {/* Beans Background Image */}
+  <img
+    src="/beans.jpg"
+    alt="Background beans"
+    class="absolute inset-0 w-full h-full object-cover z-0"
+  />
+  {/* Overlay for Contrast */}
+  <div class="absolute inset-0 z-10 bg-accent-900/90"></div>
+
+  {/* Original Content - ensure it's on top */}
+  <div class="container-custom relative z-20">
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <span
+        class="inline-block px-3 py-1 text-sm font-medium bg-secondary-100 text-secondary-800 rounded-full mb-4"
+      >
+        Our Core Values
+      </span>
+      <h2 class="text-3xl md:text-4xl font-bold mb-6 text-primary-100">
+        What drives <span
+          class="text-transparent bg-clip-text bg-gradient-to-r from-primary-300 to-secondary-500"
+          >everything</span
+        > we build
+      </h2>
+      <p class="text-lg text-slate-100">
+        These principles guide our work. They represent our commitment to creating educational technology that truly serves students and teachers.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {
+        values.map((value) => {
+          const IconComponent = value.icon;
+          return (
+            <div class="card card-hover group">
+              <div
+                class={`w-12 h-12 rounded-lg bg-${value.color}-900 flex 
+                  items-center justify-center mb-5 text-${value.color}-100 
+                  transition-colors`}
+              >
+                <IconComponent class="w-6 h-6" />
+              </div>
+              <h3 class="text-xl font-semibold mb-3">{value.title}</h3>
+              <p class="text-slate-600">{value.description}</p>
+            </div>
+          );
+        })
+      }
+    </div>
+  </div>
+</section>
+
