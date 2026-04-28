@@ -1,101 +1,108 @@
 ---
-import { GraduationCap, Shield, Zap, Rocket, Lightbulb, Users } from 'lucide-astro';
+import {
+  Target,
+  Shield,
+  Sparkles,
+  Bot,
+  Rocket,
+  MessageCircle,
+} from "lucide-astro";
 
 const values = [
   {
-    title: "Student & Teacher First",
+    title: "Real problems first",
     description:
-      "Every feature we build prioritizes the needs of educators and learners. We design with empathy, understanding the real challenges faced in modern classrooms.",
-    icon: GraduationCap,
-    color: "primary",
+      "We build for day-to-day needs: helping kids stick with practice, giving families and schools simple workflows, and taking friction out of rental operations—not pitch decks or buzzwords.",
+    icon: Target,
   },
   {
-    title: "Accessibility by Design",
+    title: "Accessible by default",
     description:
-      "We believe technology should be inclusive. Our platforms are built with accessibility at the core, ensuring every student can participate and succeed regardless of their needs.",
+      "Interfaces should work for a wide range of people and abilities. Inclusive design is part of shipping something people can actually use, not an afterthought.",
     icon: Shield,
-    color: "primary",
   },
   {
-    title: "Seamless Experience",
+    title: "Clarity over complexity",
     description:
-      "Complex educational tools shouldn't feel complex. We craft intuitive interfaces that feel natural, reducing friction so educators can focus on teaching and students can focus on learning.",
-    icon: Zap,
-    color: "primary",
+      "Software should feel obvious. We favor plain language, thoughtful flows, and the shortest path to the outcome—whether you are a parent, a teacher, or a property owner.",
+    icon: Sparkles,
   },
   {
-    title: "Empowerment Through Technology",
+    title: "AI with a purpose",
     description:
-      "We don't just build tools—we create opportunities. Our platforms empower educators to innovate in their teaching and students to take ownership of their learning journey.",
+      "We use AI where it saves time and reduces drudgery—summaries, suggestions, and automation you can review—not as a gimmick. You stay in control of decisions that matter.",
+    icon: Bot,
+  },
+  {
+    title: "Craft and reliability",
+    description:
+      "We ship products we are willing to stand behind: solid engineering, performance, and care in the details, from Practice Buddy to what we are building next.",
     icon: Rocket,
-    color: "primary",
   },
   {
-    title: "Continuous Innovation",
+    title: "Grounded in feedback",
     description:
-      "Education evolves, and so do we. We're committed to staying at the forefront of educational technology, continuously improving and adding features that matter to our community.",
-    icon: Lightbulb,
-    color: "primary",
-  },
-  {
-    title: "Community-Driven",
-    description:
-      "Our products grow from real conversations with educators and students. We listen, iterate, and build features that solve actual problems in educational settings.",
-    icon: Users,
-    color: "primary",
+      "The best ideas come from real conversations. We listen, test, and iterate with the people who use what we build so the product matches how life actually works.",
+    icon: MessageCircle,
   },
 ];
 ---
 
-<section id="shared-values" class="section-padding relative overflow-hidden">
-  {/* Beans Background Image */}
+<section
+  id="shared-values"
+  class="relative scroll-mt-[4.5rem] overflow-hidden pt-6 sm:pt-8"
+>
   <img
     src="/beans.jpg"
-    alt="Background beans"
-    class="absolute inset-0 w-full h-full object-cover z-0"
+    alt=""
+    class="absolute inset-0 z-0 w-full h-full object-cover"
   />
-  {/* Overlay for Contrast */}
-  <div class="absolute inset-0 z-10 bg-accent-900/90"></div>
+  <div
+    class="absolute inset-0 z-10"
+    style="background: linear-gradient(180deg, rgba(35, 30, 28, 0.94) 0%, rgba(50, 42, 36, 0.93) 100%);"
+  />
 
-  {/* Original Content - ensure it's on top */}
-  <div class="container-custom relative z-20">
-    <div class="text-center max-w-3xl mx-auto mb-16">
-      <span
-        class="inline-block px-3 py-1 text-sm font-medium bg-secondary-100 text-secondary-800 rounded-full mb-4"
-      >
-        Our Core Values
-      </span>
-      <h2 class="text-3xl md:text-4xl font-bold mb-6 text-primary-100">
-        What drives <span
-          class="text-transparent bg-clip-text bg-gradient-to-r from-primary-300 to-secondary-500"
-          >everything</span
-        > we build
-      </h2>
-      <p class="text-lg text-slate-100">
-        These principles guide our work. They represent our commitment to creating educational technology that truly serves students and teachers.
-      </p>
+  <div
+    class="section-padding container-custom relative z-20"
+  >
+    <div
+      class="mb-12 flex flex-col gap-6 border-b border-primary-400/20 pb-10 md:mb-14 md:flex-row md:items-end md:justify-between md:gap-10"
+    >
+      <div class="max-w-2xl">
+        <p class="kicker-on-dark">How we work</p>
+        <h2
+          class="font-display mt-1 text-display-2 font-semibold text-primary-50"
+        >
+          What drives
+          <span class="text-primary-100 not-italic">everything</span> we build
+        </h2>
+      </div>
+     
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <ul
+      class="m-0 grid list-none grid-cols-1 gap-5 p-0 sm:grid-cols-2 sm:gap-5 lg:grid-cols-3 lg:gap-6"
+    >
       {
         values.map((value) => {
           const IconComponent = value.icon;
           return (
-            <div class="card card-hover group">
-              <div
-                class={`w-12 h-12 rounded-lg bg-${value.color}-900 flex 
-                  items-center justify-center mb-5 text-${value.color}-100 
-                  transition-colors`}
-              >
-                <IconComponent class="w-6 h-6" />
+            <li class="h-full">
+              <div class="values-tile h-full rounded-xl border border-primary-200/15 bg-primary-50/90 p-6 shadow-sm transition-shadow duration-200 ease-out hover:shadow-md">
+                <div class="mb-3 flex h-10 w-10 items-center justify-center rounded-lg bg-primary-900/95 text-primary-100">
+                  <IconComponent class="h-5 w-5" />
+                </div>
+                <h3 class="font-display text-lg font-semibold text-primary-950">
+                  {value.title}
+                </h3>
+                <p class="mt-2 text-base leading-relaxed text-primary-800/95">
+                  {value.description}
+                </p>
               </div>
-              <h3 class="text-xl font-semibold mb-3">{value.title}</h3>
-              <p class="text-slate-600">{value.description}</p>
-            </div>
+            </li>
           );
         })
       }
-    </div>
+    </ul>
   </div>
 </section>
-

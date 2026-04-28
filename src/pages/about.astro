@@ -6,40 +6,75 @@ import img from "../assets/jen.jpg";
 
 <Layout
   title="About Beanpot Studio | Our Mission and Founder"
-  description="Learn about Beanpot Studio, founded by Jen Looper. We focus on AI-enhanced software solutions for education, backed by over 25 years of tech experience."
+  description="Meet Jen Looper and the Beanpot Studio team—building practical, AI-aware software for real life, from family practice to rental management."
 >
-  <section class="my-12" aria-labelledby="contact-title">
-    <div class="container mx-auto px-4">
-      <div class="grid grid-cols-1 md:grid-cols-[1.5fr,1fr] gap-8 items-start">
-        <div class="order-1">
-          <h1 class="text-3xl md:text-4xl lg:text-5xl pb-5 w-full md:w-2/3">About</h1>
-          <div class="w-full pt-5">
-            <p class="text-lg md:text-xl lg:text-2xl">
-              Welcome! I'm Jen Looper. I'm the founder and CEO of Beanpot
-              Studio, where great things are cooking, built in Boston. I have
-              over 25 years' experience as a web and mobile developer,
-              specializing in creating creative cross-platform apps, often with
-              an educational focus. I design excellent curricula on technical
-              topics and am known for the quality of my educational content, my
-              managerial skills, and my creative strategies.
+  <section
+    class="scroll-mt-[4.5rem] border-t border-primary-200/50 bg-primary-50/90"
+    aria-labelledby="about-title"
+  >
+    <div class="section-padding container-custom">
+      <header
+        class="mb-10 flex max-w-3xl flex-col gap-3 sm:mb-12"
+      >
+        <p class="kicker">Our story</p>
+        <h1
+          id="about-title"
+          class="font-display text-display-1 font-semibold text-primary-950"
+        >
+          About
+        </h1>
+        <p
+          class="max-w-prose font-sans text-base leading-relaxed text-primary-800 sm:text-lg"
+        >
+          A small Boston studio—product-minded, family-oriented, and focused on
+          tools people actually use.
+        </p>
+      </header>
+
+      <div
+        class="grid grid-cols-1 items-start gap-10 lg:grid-cols-12 lg:gap-12"
+      >
+        <div class="min-w-0 lg:col-span-7">
+          <div
+            class="rounded-2xl border border-primary-200/40 bg-white/90 p-8 ring-1 ring-primary-200/20 shadow-craft sm:p-10"
+          >
+            <p class="max-w-prose font-sans text-base leading-relaxed text-primary-800 sm:text-lg">
+              Welcome! I&apos;m Jen Looper, founder and CEO of Beanpot
+              Studio—where great things are cooking, built in Boston. I have
+              more than 25 years&apos; experience as a web and mobile developer,
+              building creative cross-platform products that solve
+              <em>real</em> problems: how families build practice into everyday
+              life, how small teams ship reliable software, and how AI can
+              support people in rental and property work without getting in the
+              way.
             </p>
-            <p class="text-lg md:text-xl lg:text-2xl mt-5">
-              I'm the Director of Developer Relations at Cloudinary and I've worked as Head of Academic Advocacy at
-               AWS, as a Principal Cloud
-              Developer Advocate at Microsoft, and as a Developer Advocate at
-              Progress/Telerik. I've also worked at small, medium, and large
-              companies over my career and have founded an educational nonprofit.
+            <p
+              class="mt-6 max-w-prose font-sans text-base leading-relaxed text-primary-800 sm:text-lg"
+            >
+              I&apos;m the Director of Developer Relations at Cloudinary, and
+              I&apos;ve served as Head of Academic Advocacy at AWS, Principal
+              Cloud Developer Advocate at Microsoft, and Developer Advocate at
+              Progress/Telerik. I design curricula on technical topics, have
+              founded a nonprofit, and have worked at organizations of every
+              size. That mix shapes how we approach product at Beanpot: clear
+              communication, high craft, and empathy for the user.
             </p>
           </div>
         </div>
 
-        <div class="order-2 flex justify-center items-start">
-          <Image
-            src={img}
-            alt="Beanpot Studio logo"
-            role="presentation"
-            class="max-w-full rounded-lg h-auto hidden lg:block"
-          />
+        <div
+          class="mx-auto w-full max-w-sm lg:col-span-5 lg:max-w-none lg:justify-self-end"
+        >
+          <figure
+            class="w-full max-w-sm motion-reduce:rotate-0 lg:max-w-md -rotate-1"
+          >
+            <Image
+              src={img}
+              alt="Portrait of Jen Looper, founder of Beanpot Studio"
+              class="h-auto w-full rounded-2xl border border-primary-200/30 shadow-craft"
+              loading="eager"
+            />
+          </figure>
         </div>
       </div>
     </div>

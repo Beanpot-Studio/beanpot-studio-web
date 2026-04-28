@@ -1,21 +1,22 @@
 <header
-  class="sticky top-0 w-full backdrop-blur-md z-50 shadow-sm"
-  style="background-image: linear-gradient(rgba(46, 34, 30, 0.95), rgba(46, 34, 30, 0.95)), url('/beans.jpg'); background-size: cover; background-position: center center;"
+  class="sticky top-0 w-full z-50 border-b border-primary-200/40 shadow-sm backdrop-blur-md"
+  style="background-image: linear-gradient(180deg, rgba(250, 248, 244, 0.97) 0%, rgba(240, 237, 230, 0.95) 100%), url('/beans.jpg'); background-size: cover; background-position: center center;"
 >
   <div class="container-custom py-4">
     <nav class="flex items-center justify-between">
       <!-- Logo -->
       <a href="/" class="flex items-center space-x-2">
         <div
-          class="w-10 h-10 bg-gradient-to-br from-primary-600 to-secondary-500 rounded-full flex items-center justify-center overflow-hidden"
+          class="flex h-10 w-10 shrink-0 items-center justify-center overflow-hidden rounded-full bg-primary-100 shadow-craft-sm ring-1 ring-inset ring-primary-300/50"
         >
-          <span class="text-white font-bold text-xl">🫘</span>
+          <span class="text-xl leading-none" aria-hidden="true">🫘</span>
         </div>
-        <span
-          class="text-xl font-semibold bg-gradient-to-r from-primary-400 to-secondary-600 bg-clip-text text-transparent"
-        >
-          Beanpot Studio
-        </span>
+        <div class="flex flex-col">
+          <span class="font-display text-lg font-semibold leading-tight text-primary-900"
+            >Beanpot Studio</span
+          >
+       
+        </div>
       </a>
 
       {/* New wrapper for Desktop Nav and CTA to push them to the right */}
@@ -24,17 +25,17 @@
         <div class="flex items-center space-x-8">
           <a
             href="/about"
-            class="font-medium text-primary-100 hover:text-orange-200 transition-colors"
+            class="inline-flex min-h-11 items-center rounded-lg px-1.5 py-1.5 -mx-1.5 font-medium text-primary-800 transition-colors hover:text-secondary-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-sage-500/50"
             >About Us</a
           >
           <a
-            href="../#features-section"
-            class="font-medium text-primary-100 hover:text-orange-200 transition-colors"
-            >Features</a
+            href="/#shared-values"
+            class="inline-flex min-h-11 items-center rounded-lg px-1.5 py-1.5 -mx-1.5 font-medium text-primary-800 transition-colors hover:text-secondary-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-sage-500/50"
+            >How we work</a
           >
           <a
-            href="../#featured-project-showcase"
-            class="font-medium text-primary-100 hover:text-orange-200 transition-colors"
+            href="/#featured-project-showcase"
+            class="inline-flex min-h-11 items-center rounded-lg px-1.5 py-1.5 -mx-1.5 font-medium text-primary-800 transition-colors hover:text-secondary-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-sage-500/50"
             >Projects</a
           >
         </div>
@@ -47,8 +48,12 @@
 
       <!-- Mobile Menu Button -->
       <button
+        type="button"
         id="menu-toggle"
-        class="md:hidden text-orange-100 hover:text-orange-200 p-2 min-w-[44px] min-h-[44px] flex items-center justify-center"
+        class="md:hidden min-h-[44px] min-w-[44px] flex items-center justify-center rounded-lg p-2 text-primary-800 transition-colors hover:text-secondary-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-sage-500/50"
+        aria-controls="mobile-menu"
+        aria-expanded="false"
+        aria-label="Open navigation menu"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -57,6 +62,7 @@
           stroke-width="1.5"
           stroke="currentColor"
           class="w-6 h-6"
+          aria-hidden="true"
         >
           <path
             stroke-linecap="round"
@@ -71,17 +77,17 @@
       <div class="flex flex-col space-y-2">
         <a
           href="/"
-          class="font-medium text-primary-100 hover:text-orange-200 transition-colors py-3 min-h-[44px] flex items-center"
+          class="font-medium text-primary-800 hover:text-secondary-600 transition-colors py-3 min-h-[44px] flex items-center"
           >Home</a
         >
         <a
-          href="#features-section"
-          class="font-medium text-primary-100 hover:text-orange-200 transition-colors py-3 min-h-[44px] flex items-center"
-          >Features</a
+          href="/#shared-values"
+          class="font-medium text-primary-800 hover:text-secondary-600 transition-colors py-3 min-h-[44px] flex items-center"
+          >How we work</a
         >
         <a
-          href="#featured-project-showcase"
-          class="font-medium text-primary-100 hover:text-orange-200 transition-colors py-3 min-h-[44px] flex items-center"
+          href="/#featured-project-showcase"
+          class="font-medium text-primary-800 hover:text-secondary-600 transition-colors py-3 min-h-[44px] flex items-center"
           >Projects</a
         >
 
@@ -99,8 +105,18 @@
     const mobileMenu = document.getElementById("mobile-menu");
 
     if (menuToggle && mobileMenu) {
+      const sync = () => {
+        const open = !mobileMenu.classList.contains("hidden");
+        menuToggle.setAttribute("aria-expanded", String(open));
+        menuToggle.setAttribute(
+          "aria-label",
+          open ? "Close navigation menu" : "Open navigation menu",
+        );
+      };
+
       menuToggle.addEventListener("click", () => {
         mobileMenu.classList.toggle("hidden");
+        sync();
       });
     }
   });

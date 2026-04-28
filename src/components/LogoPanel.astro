@@ -1,0 +1,117 @@
+---
+import { Image } from "astro:assets";
+import logoImage from "../assets/logo-new.png";
+
+interface Props {
+  /** Empty = decorative (hero). Set for pages that need a label, e.g. contact. */
+  alt?: string;
+  loading?: "eager" | "lazy" | null | undefined;
+  /** Smaller panel + image for a denser hero above the fold */
+  compact?: boolean;
+}
+
+const { alt = "", loading = "eager", compact = false } = Astro.props;
+const decorative = !alt;
+const imgW = compact ? 320 : 400;
+const panelClass = compact
+  ? "logo-panel logo-panel--compact relative w-full max-w-[12.5rem] sm:max-w-[14rem] md:max-w-[16rem] rotate-[0.5deg] rounded-2xl border-0 p-4 sm:p-5 shadow-none md:rotate-[-0.3deg]"
+  : "logo-panel relative w-full max-w-xs rotate-[0.5deg] md:max-w-sm rounded-[1.75rem] border-0 p-8 shadow-none md:rotate-[-0.3deg]";
+---
+
+<div class={panelClass}>
+  {
+    decorative ? (
+      <Image
+        src={logoImage}
+        alt=""
+        width={imgW}
+        class="h-auto w-full"
+        role="presentation"
+        aria-hidden="true"
+        loading={loading}
+      />
+    ) : (
+      <Image
+        src={logoImage}
+        alt={alt}
+        width={imgW}
+        class="h-auto w-full"
+        loading={loading}
+      />
+    )
+  }
+  <div class="particle particle-0" aria-hidden="true" />
+  <div class="particle particle-1" aria-hidden="true" />
+  <div class="particle particle-2" aria-hidden="true" />
+  <div class="particle particle-3" aria-hidden="true" />
+  <div class="particle particle-4" aria-hidden="true" />
+  <div class="particle particle-5" aria-hidden="true" />
+</div>
+
+<style is:global>
+  .logo-panel .particle {
+    position: absolute;
+    width: 0.4rem;
+    height: 0.4rem;
+    background-color: rgba(91, 109, 88, 0.38);
+    border-radius: 50%;
+    top: 2.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+  }
+
+  .logo-panel--compact .particle {
+    top: 1.35rem;
+  }
+
+  @keyframes logo-particle-float {
+    0% {
+      transform: translateX(calc(-50% + var(--tx))) translateY(0) scale(1);
+      opacity: 1;
+    }
+    100% {
+      transform: translateX(calc(-50% + var(--tx))) translateY(var(--ty))
+        scale(0);
+      opacity: 0;
+    }
+  }
+
+  .logo-panel .particle-0 {
+    --tx: -18px;
+    --ty: -24px;
+    animation: logo-particle-float 3.2s ease-out infinite;
+  }
+  .logo-panel .particle-1 {
+    --tx: 20px;
+    --ty: -32px;
+    animation: logo-particle-float 3.5s ease-out 0.2s infinite;
+  }
+  .logo-panel .particle-2 {
+    --tx: -32px;
+    --ty: -40px;
+    animation: logo-particle-float 3.8s ease-out 0.1s infinite;
+  }
+  .logo-panel .particle-3 {
+    --tx: 36px;
+    --ty: -36px;
+    animation: logo-particle-float 3.4s ease-out 0.4s infinite;
+  }
+  .logo-panel .particle-4 {
+    --tx: -24px;
+    --ty: -48px;
+    animation: logo-particle-float 4.1s ease-out infinite;
+  }
+  .logo-panel .particle-5 {
+    --tx: 28px;
+    --ty: -44px;
+    animation: logo-particle-float 3.9s ease-out 0.3s infinite;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .logo-panel .particle {
+      animation: none;
+      opacity: 0.2;
+    }
+  }
+</style>

@@ -6,12 +6,20 @@ import Layout from "../layouts/Layout.astro";
   title="Page Not Found (404) | Beanpot Studio"
   description="Oops! The page you are looking for at Beanpot Studio could not be found. It might be still growing or has been moved."
 >
-  <div class="flex flex-col items-center text-center bg-cream my-12">
-    <h1 class="text-6xl font-bold text-burgundy mb-4">Page not yet found!</h1>
-    <p class="text-xl text-gray-700 mb-6">
-      🌱 Oops! The page you're looking for is still growing! Please stay tuned.
+  <div
+    class="my-12 flex flex-col items-center bg-primary-50/80 px-4 py-16 text-center"
+  >
+    <h1 class="font-display text-display-1 font-semibold text-primary-900">
+      Page not yet found!
+    </h1>
+    <p class="mt-4 max-w-prose text-lg leading-[1.625] text-primary-800">
+      The page you&apos;re looking for isn&apos;t here. It may have moved, or the
+      link might be out of date.
     </p>
-    <a href="/" class="text-tan font-medium hover:underline">
+    <a
+      href="/"
+      class="mt-8 font-sans text-base font-semibold text-secondary-600 underline-offset-4 transition-colors hover:text-secondary-700 hover:underline"
+    >
       Go back to the homepage
     </a>
   </div>

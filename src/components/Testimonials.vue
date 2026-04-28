@@ -60,13 +60,13 @@ onMounted(() => {
   <section class="section-padding bg-white">
     <div class="container-custom">
       <div class="text-center max-w-3xl mx-auto mb-16">
-        <span class="inline-block px-3 py-1 text-sm font-medium bg-primary-100 text-primary-800 rounded-full mb-4">
+        <span class="inline-block px-3 py-1 text-sm font-medium bg-secondary-100 text-secondary-800 rounded-full mb-4">
           Success Stories
         </span>
-        <h2 class="text-3xl md:text-4xl font-bold mb-6">
+        <h2 class="text-3xl md:text-4xl font-bold mb-6 text-primary-950">
           Hear from our educator community
         </h2>
-        <p class="text-lg text-slate-600">
+        <p class="text-lg text-primary-800">
           Discover how educators are transforming learning experiences with our platform.
         </p>
       </div>
@@ -84,10 +84,10 @@ onMounted(() => {
                 :key="index"
                 class="w-full flex-shrink-0 px-4"
               >
-                <div class="relative bg-slate-50 rounded-xl p-8 shadow-soft">
+                <div class="relative bg-primary-50 rounded-xl p-8 shadow-soft">
                   <div class="absolute -top-4 left-10 text-5xl text-primary-300">"</div>
                   
-                  <p class="text-lg text-slate-700 mb-6 relative z-10">
+                  <p class="text-lg text-primary-800 mb-6 relative z-10">
                     {{ testimonial.quote }}
                   </p>
                   
@@ -98,8 +98,8 @@ onMounted(() => {
                       class="w-12 h-12 rounded-full mr-4 object-cover" 
                     />
                     <div>
-                      <h4 class="font-semibold text-slate-900">{{ testimonial.author }}</h4>
-                      <p class="text-sm text-slate-600">{{ testimonial.position }}</p>
+                      <h4 class="font-semibold text-primary-950">{{ testimonial.author }}</h4>
+                      <p class="text-sm text-primary-800">{{ testimonial.position }}</p>
                     </div>
                   </div>
                 </div>
@@ -109,7 +109,7 @@ onMounted(() => {
 
           <!-- Navigation Buttons -->
           <button 
-            class="absolute top-1/2 -left-4 transform -translate-y-1/2 w-10 h-10 rounded-full bg-white shadow-md flex items-center justify-center text-slate-700 hover:bg-slate-50 transition-colors focus:outline-none focus:ring-2 focus:ring-primary-500"
+            class="absolute top-1/2 -left-4 transform -translate-y-1/2 w-10 h-10 rounded-full bg-white shadow-md flex items-center justify-center text-primary-800 hover:bg-primary-50 transition-colors focus:outline-none focus:ring-2 focus:ring-primary-500"
             @click="prevTestimonial"
             aria-label="Previous testimonial"
           >
@@ -119,7 +119,7 @@ onMounted(() => {
           </button>
           
           <button 
-            class="absolute top-1/2 -right-4 transform -translate-y-1/2 w-10 h-10 rounded-full bg-white shadow-md flex items-center justify-center text-slate-700 hover:bg-slate-50 transition-colors focus:outline-none focus:ring-2 focus:ring-primary-500"
+            class="absolute top-1/2 -right-4 transform -translate-y-1/2 w-10 h-10 rounded-full bg-white shadow-md flex items-center justify-center text-primary-800 hover:bg-primary-50 transition-colors focus:outline-none focus:ring-2 focus:ring-primary-500"
             @click="nextTestimonial"
             aria-label="Next testimonial"
           >
@@ -137,7 +137,7 @@ onMounted(() => {
             @click="setTestimonial(index)"
             :class="[
               'w-2.5 h-2.5 rounded-full transition-all duration-300',
-              currentTestimonial === index ? 'bg-primary-600 w-8' : 'bg-slate-300 hover:bg-slate-400'
+              currentTestimonial === index ? 'bg-primary-600 w-8' : 'bg-primary-200 hover:bg-primary-300'
             ]"
             :aria-label="`Go to testimonial ${index + 1}`"
           ></button>

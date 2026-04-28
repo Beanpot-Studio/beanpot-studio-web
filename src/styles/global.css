@@ -4,53 +4,96 @@
 
 @layer base {
   html {
-    font-family: 'Inter', sans-serif;
+    @apply font-sans text-base antialiased;
   }
-  
-  h1, h2, h3, h4, h5, h6 {
-    @apply font-medium leading-tight;
-  }
-  
-  h1 {
-    @apply text-4xl md:text-5xl lg:text-6xl;
-  }
-  
-  h2 {
-    @apply text-3xl md:text-4xl;
-  }
-  
+
+  h1,
+  h2,
   h3 {
-    @apply text-2xl md:text-3xl;
+    @apply font-display font-medium text-balance;
   }
-  
-  p, li {
+
+  h4,
+  h5,
+  h6 {
+    @apply font-sans font-semibold leading-tight;
+  }
+
+  h1 {
+    @apply text-display-1;
+  }
+
+  h2 {
+    @apply text-display-2;
+  }
+
+  h3 {
+    @apply text-display-3;
+  }
+
+  p,
+  li {
     @apply leading-relaxed;
   }
 
   body {
-    @apply text-slate-800;
+    @apply text-primary-900 leading-[1.625];
   }
 }
 
 @layer components {
+  /* Buttons: two styles only. Primary = sage; secondary = brick (same warm family as site text) */
   .btn {
-    @apply inline-flex items-center justify-center px-5 py-2.5 rounded-lg font-medium transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2;
-  }
-  
-  .btn-primary {
-    @apply btn bg-primary-600 text-white hover:bg-primary-700 focus:ring-primary-500;
-  }
-  
-  .btn-secondary {
-    @apply btn bg-secondary-600 text-white hover:bg-secondary-700 focus:ring-secondary-500;
+    @apply inline-flex min-h-[2.75rem] items-center justify-center rounded-xl px-5 py-2.5 text-base font-semibold transition-all duration-200 ease-out;
+    @apply focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2;
   }
 
-  .btn-accent {
-    @apply btn bg-accent-500 text-white hover:bg-accent-600 focus:ring-accent-400;
+  .btn-primary {
+    @apply btn text-btn-on bg-sage-600 shadow-craft;
+    @apply hover:bg-sage-700 hover:shadow-craft-hover hover:-translate-y-0.5;
+    @apply focus-visible:ring-sage-300 focus-visible:ring-offset-2;
+    @apply motion-reduce:hover:translate-y-0;
   }
-  
-  .btn-outline {
-    @apply btn bg-transparent border-2 border-primary-600 text-primary-600 hover:bg-primary-50 focus:ring-primary-500;
+
+  .btn-secondary {
+    @apply btn text-btn-on bg-secondary-600 shadow-craft;
+    @apply hover:bg-secondary-700 hover:shadow-craft-hover hover:-translate-y-0.5;
+    @apply focus-visible:ring-secondary-300 focus-visible:ring-offset-2;
+    @apply motion-reduce:hover:translate-y-0;
+  }
+
+  /* Lighter sage primary on umber/charcoal bands (still “primary” — one CTA, two surface treatments) */
+  .section-cta .btn-primary {
+    @apply bg-sage-200 text-sage-900;
+    @apply shadow-craft hover:shadow-craft-hover hover:-translate-y-0.5 hover:bg-sage-100;
+    @apply focus-visible:ring-sage-400 focus-visible:ring-offset-2;
+    @apply focus-visible:ring-offset-primary-800;
+    @apply motion-reduce:hover:translate-y-0;
+  }
+
+  /* Section label (default): use on parchment / light sections. Not a filled pill. */
+  .kicker {
+    @apply font-sans text-xs font-semibold uppercase tracking-widest text-primary-700/80;
+  }
+
+  /* Kicker on dark photo scrims (e.g. How we work) */
+  .kicker-on-dark {
+    @apply font-sans text-xs font-semibold uppercase tracking-widest text-primary-200/90;
+  }
+
+  /* Kicker on light sage / tinted blocks (e.g. coming soon band) */
+  .kicker-on-sage {
+    @apply font-sans text-xs font-semibold uppercase tracking-widest text-primary-800/90;
+  }
+
+  /* Rare marketing chip: at most one per major view; not for section headers. */
+  .pill-marketing {
+    @apply inline-flex items-center rounded-full border border-primary-200/80 bg-white/90 px-2.5 py-1.5 font-sans text-xs font-medium text-secondary-800 shadow-craft-sm sm:px-3.5 sm:text-sm;
+  }
+
+  /* In-card taxonomy (audience, status on cards) — not the same as pill-marketing */
+  .tag-sage {
+    @apply inline-block rounded-md bg-sage-100 px-2 py-0.5 text-xs font-medium text-sage-800;
   }
 
   .container-custom {
@@ -62,10 +105,18 @@
   }
 
   .card {
-    @apply bg-white rounded-xl shadow-soft p-6 transition-all duration-300;
+    @apply bg-white rounded-2xl shadow-soft p-6 transition-all duration-300;
   }
 
   .card-hover {
     @apply hover:shadow-lg hover:-translate-y-1;
+  }
+}
+
+@layer utilities {
+  @media (prefers-reduced-motion: reduce) {
+    .card-hover {
+      @apply hover:translate-y-0;
+    }
   }
 }
