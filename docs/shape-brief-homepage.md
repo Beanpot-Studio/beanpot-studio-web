@@ -5,7 +5,7 @@
 
 ## 1. Feature summary
 
-The homepage is the **brand** entry: Hero, How we work (values), Products (Practice Buddy + rental teaser), closing CTA. It communicates *practical software for real life*, Boston credibility, and clear next steps without generic edtech filler.
+The homepage is the **brand** entry: Hero, How we work (values), Products (Practice Buddy), closing CTA. It communicates *practical software for real life*, Boston credibility, and clear next steps without generic edtech filler.
 
 ## 2. Primary user action
 
@@ -25,7 +25,7 @@ Production, single route (`/`), four section components, reduced motion for part
 
 ## 5. Layout strategy
 
-Hero two-column on lg; values = lead card + 2×3 grid; projects = solid PB panel + dashed rental block; CTA = single button; section rhythm with borders/padding as implemented.
+Hero two-column on lg; values = lead card + 2×3 grid; projects = solid PB panel; CTA = single button; section rhythm with borders/padding as implemented.
 
 ## 6. Key states
 
@@ -33,11 +33,11 @@ Default load; focus-visible on interactive elements; `prefers-reduced-motion` fo
 
 ## 7. Interaction model
 
-In-page hashes for values and projects; external link to Practice Buddy; contact paths for rental and CTA band.
+In-page hashes for values and projects; external link to Practice Buddy; contact paths for CTA band.
 
 ## 8. Content requirements
 
-As implemented: hero badge/H1/body/CTAs/Boston; six values with lead; projects intro + PB + coming soon; short CTA copy.
+As implemented: hero badge/H1/body/CTAs/Boston; six values with lead; projects intro + PB; short CTA copy.
 
 ## 9. Open questions (future craft)
 

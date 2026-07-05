@@ -6,13 +6,13 @@ brand
 
 ## Users
 
-**Primary visitors** to the public marketing site: prospective clients, partners, and press evaluating Beanpot Studio. **Practice Buddy** serves parents, educators, and school-adjacent users who need structured practice for kids. **Upcoming rental / AI** work targets property owners and operators who want less admin and clearer decisions. **Secondary:** collaborators, community, and industry connections who may know the founder from DevRel and advocacy roles.
+**Primary visitors** to the public marketing site: prospective clients, partners, and press evaluating Beanpot Studio. **Practice Buddy** serves parents, educators, and school-adjacent users who need structured practice for kids. **Secondary:** collaborators, community, and industry connections who may know the founder from DevRel and advocacy roles.
 
 **Context:** People arrive from search, referral, or conference context; the site should quickly answer what the studio builds, why it is different from generic "edtech" positioning, and how to start a conversation.
 
 ## Product Purpose
 
-The Beanpot Studio website is a **brand** property: the design and copy *are* the product experience for most visitors. Its job is to communicate a small Boston-area studio that ships **practical software for real life**—habits and practice for families and schools, and **AI-assisted rental property management** in development—while staying warm, direct, and credible. Success looks like clear positioning, working contact paths, and accurate representation of live products (e.g. Practice Buddy) plus honest "coming soon" framing for the rental work.
+The Beanpot Studio website is a **brand** property: the design and copy *are* the product experience for most visitors. Its job is to communicate a small Boston-area studio that ships **practical software for real life**—habits and practice for families and schools—while staying warm, direct, and credible. Success looks like clear positioning, working contact paths, and accurate representation of live products (e.g. Practice Buddy).
 
 ## Brand Personality
 
@@ -30,7 +30,7 @@ The Beanpot Studio website is a **brand** property: the design and copy *are* th
 
 ## Design Principles
 
-1. **Real problems before categories** — lead with outcomes (practice, property ops), not GICS labels.
+1. **Real problems before categories** — lead with outcomes (practice), not GICS labels.
 2. **Clarity over cleverness** — in headlines, body copy, and primary navigation.
 3. **AI as assistive, not magic** — user stays in control; no black-box promise language.
 4. **Inclusive and accessible by default** — public pages should meet a responsible baseline for contrast, motion, and form usability.
