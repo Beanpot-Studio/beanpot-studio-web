@@ -1,8 +1,8 @@
 # Beanpot Studio (web)
 
-Public marketing site for Beanpot Studio, a small Boston-based product studio. The work is framed as practical software for real life: structured practice for kids and families (including [Practice Buddy](https://www.practicebuddy.club)), without leading with generic “edtech” framing.
+Public marketing site for Beanpot Studio, a small Boston-based product studio. The work is framed as practical software for real life: automated assessment and credentialing for schools (including [DifferenTest](https://www.differentest.club)), and structured practice for kids and families (including [Practice Buddy](https://practicebuddyapp.netlify.app)), without leading with generic "edtech" framing.
 
-**Design and product context:** see [`PRODUCT.md`](PRODUCT.md) (strategy, audience, principles) and [`DESIGN.md`](DESIGN.md) (visual system, tokens, do’s and don’ts).
+**Design and product context:** see [`PRODUCT.md`](PRODUCT.md) (strategy, audience, principles) and [`DESIGN.md`](DESIGN.md) (visual system, tokens, do's and don'ts).
 
 ## Stack
 

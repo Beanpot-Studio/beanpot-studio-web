@@ -6,13 +6,13 @@ brand
 
 ## Users
 
-**Primary visitors** to the public marketing site: prospective clients, partners, and press evaluating Beanpot Studio. **Practice Buddy** serves parents, educators, and school-adjacent users who need structured practice for kids. **Secondary:** collaborators, community, and industry connections who may know the founder from DevRel and advocacy roles.
+**Primary visitors** to the public marketing site: prospective clients, partners, and press evaluating Beanpot Studio. **DifferenTest** serves teachers and students who need automated assessment and credentialing. **Practice Buddy** serves parents, educators, and school-adjacent users who need structured practice for kids. **Secondary:** collaborators, community, and industry connections who may know the founder from DevRel and advocacy roles.
 
 **Context:** People arrive from search, referral, or conference context; the site should quickly answer what the studio builds, why it is different from generic "edtech" positioning, and how to start a conversation.
 
 ## Product Purpose
 
-The Beanpot Studio website is a **brand** property: the design and copy *are* the product experience for most visitors. Its job is to communicate a small Boston-area studio that ships **practical software for real life**—habits and practice for families and schools—while staying warm, direct, and credible. Success looks like clear positioning, working contact paths, and accurate representation of live products (e.g. Practice Buddy).
+The Beanpot Studio website is a **brand** property: the design and copy *are* the product experience for most visitors. Its job is to communicate a small Boston-area studio that ships **practical software for real life**—assessments and credentialing for schools, habits and practice for families—while staying warm, direct, and credible. Success looks like clear positioning, working contact paths, and accurate representation of live products (e.g. DifferenTest, Practice Buddy).
 
 ## Brand Personality
 
